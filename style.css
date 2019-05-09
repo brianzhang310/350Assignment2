@@ -1,0 +1,27 @@
+.header{
+    height: 100px;
+    background: #34495e;
+    padding: 0 20px;
+    color: #fff;
+  }
+  .logo{
+    line-height: 100px;
+    float: left;
+    text-transform: uppercase;
+    position:relative;
+    font-size:xx-large;
+  }
+  
+  .menu{
+    float: right;
+    line-height: 100px;
+  }
+  .menu a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+    font-size:xx-large;
+    margin-bottom:35px;
+  }
