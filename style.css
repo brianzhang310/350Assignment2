@@ -25,3 +25,46 @@
     font-size:xx-large;
     margin-bottom:35px;
   }
+
+  .layout__list {
+    align-self: start;
+    background-color: lightgray;
+    display: grid;
+    grid-gap: 5px;
+    border-radius: 4px;
+    box-shadow: #5b6773 5px 5px 15px 5px ;
+  
+  }
+
+  
+  .list__card:hover {
+  transform: scale(1.03);
+  }
+
+  .list__type {
+    margin: 6px;
+    padding: 8px;
+  }
+
+  .list__card {
+    background-color: ghostwhite;
+    background: ghostwhite;
+    display: grid;
+    box-sizing: border-box;
+    margin: 6px;
+    border-radius: 4px;
+  
+    padding: 8px;
+  
+    transition: all .3s ease;
+  }
+
+  .card__date {
+    font-size: 12px;
+    background-color: #eab137;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 4px;
+    width: 50px;
+    text-align: center;
+  }

@@ -1,6 +1,4 @@
-var TodoList = [];
-var DoingList = [];
-var DoneList = [];
+
 
 function openForm() {
     document.getElementById("myForm").style.display = "block";
