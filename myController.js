@@ -18,7 +18,7 @@ app.controller("myController", function($scope) {
     $scope.tasks[i].dates = '';
     $scope.tasks[i].person = '';
     $scope.tasks[i].title = $scope.titles[i];
-    $scope.tasks[i].dates = $scope.dates[i];
+    $scope.tasks[i].date = $scope.dates[i];
     $scope.tasks[i].person = $scope.names[i];
   }
   $scope.TodoList = [$scope.tasks[0],$scope.tasks[2]];
@@ -27,7 +27,19 @@ app.controller("myController", function($scope) {
 
 
 
+  $scope.closeForm() = function()  {
+    $scope.chatbox.style.display = "none";
+  };
 
+
+  $scope.toggleForm() = function() {
+    display = $scope.chatbox.style.display;
+    if(display=="none"){
+          document.getElementById("myForm").style.display = "block";
+    }else{
+          document.getElementById("myForm").style.display = "none";
+    }
+  };
 
 
 });

@@ -35,47 +35,81 @@
 
 
       
-        <div class="container">
+        <div class=".container-fluid">
           <!-- Chat box -->
-            <div class="col-sm" id=myForm style="display:none">
-              <form action="/action_page.php" class="form-container">
-                <div class="chat-header">
-                  <button class="btn_cancel" onclick="closeForm()">&times;</button>
-                  <h2>Chat room</h2>
-                </div>
-                  <img src="ChatImage.png" style="width:100%;height:600px; ">
-      
-                <div class="chat_send">
-                  <textarea placeholder="Type message.." name="msg" required></textarea>
-                  <i class="fa fa-arrow-circle-up" style="font-size:-webkit-xxx-large;float:right;color:#a6b3bb"></i>
-                </div>
-              </form>
-            </div>
-            <div class="col-sm">
+          <div class="row" style="width:100%">
+            <div class="col-sm-9">
               <div class="row">
-                <div ng-repeat="task in TodoList">
+
                   <div class="col-sm"> 
-                    <div>
                         <div class='layout__list'>
-                            <div class="list__type">
-                              <h1>To Do</h1>
+                          <div class="list__type">
+                            <h1>To Do</h1>
+                          </div>
+                          <div class='list__card'  ng-repeat="task in TodoList">
+                              <label class='card__label'>{{ task.title }}</label>
+                              <div class='card__date'>{{ task.date }}</div>
+                          </div>
+                          <div class="addTaskButton" on-click="addNewTask()">
+                              +Add Another Task  
+                          </div>
                         </div>
-                        <div class='list__card'>
+                  </div>
+
+                  <div class="col-sm"> 
+                      <div class='layout__list'>
+                        <div class="list__type">
+                          <h1>To Do</h1>
+                        </div>
+                        <div class='list__card'  ng-repeat="task in DoingList">
                             <label class='card__label'>{{ task.title }}</label>
                             <div class='card__date'>{{ task.date }}</div>
                         </div>
-                    </div>
+                        <div class="addTaskButton" on-click="addNewTask()">
+                            +Add Another Task  
+                        </div>
+                      </div>
                   </div>
-                </div>
-                  <div class="col-sm">
-                    One of three columns
-                  </div>
-                  <div class="col-sm">
-                    One of three columns
+
+                  <div class="col-sm  mr-auto"> 
+                      <div class='layout__list'>
+                        <div class="list__type">
+                          <h1>To Do</h1>
+                        </div>
+                        <div class='list__card'  ng-repeat="task in DoneList">
+                            <label class='card__label'>{{ task.title }}</label>
+                            <div class='card__date'>{{ task.date }}</div>
+                        </div>
+                        <div class="addTaskButton" on-click="addNewTask()">
+                          +Add Another Task  
+                        </div>
+                      </div>
                   </div>
               </div>
+
             </div>
-      
+
+            <div class="col-sm-3">
+              <div ng-model="chatbox" style="display:none">
+              <div class="chatbox">
+                  <div class="chat-header row" style="margin-left: 0px;margin-right: 0px;">
+                      <h2 style="margin:auto;">Chat Room </h2>
+                      <icon class="fa fa-window-close closeButton" style="margin:auto;" onclick="closeForm()"></icon>
+                  </div>
+                  <!-- empty column -->
+              </div>
+              <div style="background-color: #a6b3bb;width:100%">
+                  <img src="ChatImage.png" style="width:100%;height:600px; "> 
+              </div>
+              <div class="row" style="margin-left: 0px;margin-right: 0px;">
+                  <textarea class="col-sm-10" style="resize: none" placeholder="Type Message Here" name="msg" required></textarea>
+                  <div class="col-sm-2" style="background-color:#fff">
+                  <icon class="fa fa-arrow-circle-up" style="font-size:-webkit-xxx-large;float:right;color:#1390ff;"></icon>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
