@@ -32,6 +32,8 @@ body {
   text-decoration: none;
   padding: 0 10px;
   transition: 0.4s;
+  font-size:xx-large;
+  margin-bottom:35px;
 }
 .show-menu-btn,.hide-menu-btn{
   transition: 0.4s;
@@ -302,10 +304,11 @@ body {
 .dialog-content {
   position: relative;
   background-color: white;
-  margin: auto;
+  margin:auto;
   padding: 0;
   border: 1px solid #888;
   width: 30%;
+  overflow:auto;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -339,4 +342,20 @@ body {
 {
   width:100%;
   resize: none;
+}
+
+.chat__box{
+  display: block;
+}
+
+
+.newTaskBody{
+  display:grid;
+  grid-template-columns: 3;
+  grid-template-rows: 3;
+}
+
+.rowBox{
+  position:relative;
+  margin-left:80px;
 }
