@@ -18,6 +18,8 @@ body {
   line-height: 100px;
   float: left;
   text-transform: uppercase;
+  position:relative;
+  font-size:xx-large;
 }
 
 .menu{
@@ -102,7 +104,7 @@ body {
   top: 100px;
   bottom: 0px;
   left: 0px;
-  background:#00ffd0;
+  background:#a6b3bb;
 
 }
 
@@ -121,6 +123,7 @@ body {
   display: grid;
   grid-gap: 5px;
   border-radius: 4px;
+  box-shadow: #5b6773 5px 5px 15px 5px ;
 
 }
 
@@ -172,7 +175,7 @@ body {
 
 .card__date {
   font-size: 12px;
-  background-color: red;
+  background-color: #eab137;
   color: white;
   border-radius: 4px;
   padding: 2px 4px;
@@ -226,7 +229,7 @@ body {
 /* Full-width textarea */
 .form-container textarea {
 
-  width: 250px;
+  width: 275px;
   height: 10px;
   padding: 15px;
   margin: 5px 0 22px 0;
