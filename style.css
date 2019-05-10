@@ -35,7 +35,9 @@
     box-shadow: #5b6773 5px 5px 15px 5px ;
     margin-top: 20px;
   }
-
+  .layout_box{
+    box-shadow: #5b6773 0px 5px 15px 5px ;
+  }
   
   .list__card:hover {
   transform: scale(1.03);
@@ -104,6 +106,8 @@
     
   }
   
+  
+
   .chatbox{
     margin-top: 0px;
     margin-right:0px;

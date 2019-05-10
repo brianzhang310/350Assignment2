@@ -29,8 +29,8 @@
           </div>
       
           <ul class="menu">
-            <a class="fa fa-home" href="C:\Users\zhugu\Documents\GitHub\350Assignment2\index.html"></a>
-            <a class="fa fa-file" href="#"></a>
+            <a class="fa fa-home" href="none"></a>
+            <a class="fa fa-file" href="#" ng-click="toggleFile()"></a>
             <a class="fa fa-comments" href="#" ng-click="toggleForm()"></a>
           </ul>
         </div>
@@ -93,14 +93,17 @@
             </div>
 
             <div class="col-sm-3">
+              
               <div ng-model="chatbox" style="display:{{chatbox.style.display}}">
               <div class="chatbox">
+                  <div class="layout_box">
                   <div class="chat-header row" style="margin-left: 0px;margin-right: 0px;">
                       <h2 style="margin:auto;">Chat Room </h2>
                       <icon class="fa fa-window-close closeButton" style="margin:auto;cursor:pointer" ng-click="closeForm()"></icon>
+
                   </div>
                   <!-- empty column -->
-              </div>
+            
               <div style="background-color: #a6b3bb;width:100%">
                   <img src="ChatImage.png" style="width:100%;height:600px; "> 
               </div>
@@ -112,7 +115,28 @@
               </div>
               </div>
             </div>
+              </div>
+            
+            
+              <div ng-model="filemanager" style="display:{{filemanager.style.display}}">
+                <div class="filemanager">
+                  <div class="layout_box">
+                    <div class="chat-header row" style="margin-left: 0px;margin-right: 0px;">
+                        <h2 style="margin:auto;">File Manager </h2>
+                        <icon class="fa fa-window-close closeButton" style="margin:auto;" ng-click="closeFile()"></icon>
+                    </div>
+                    <!-- empty column -->
+                    
+                
+                  <div style="background-color: #a6b3bb;width:100%">
+                    <img src="FileManagement.png" style="width:100%;height:600px; "> 
+                  </div>
+                </div>
+            </div>
+            
+            </div>
           </div>
+        
         </div>
       </div>
 

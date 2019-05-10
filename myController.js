@@ -27,19 +27,51 @@ app.controller("myController", function($scope) {
 
   $scope.chatbox={};
   $scope.chatbox.style={};
-  $scope.chatbox.style.display='';
 
+  $scope.chatbox.style.display='none';
+  
   $scope.closeForm =  function()  {
     $scope.chatbox.style.display = "none";
+  };
+  $scope.filemanager={};
+  $scope.filemanager.style={};
+  $scope.filemanager.style.display='none';
+  
+  $scope.closeFile =  function()  {
+    $scope.filemanager.style.display = "none";
   };
 
 
   $scope.toggleForm =  function() {
-    display = $scope.chatbox.style.display;
-    if(display=="none"){
+    display1 = $scope.chatbox.style.display;
+    display2 = $scope.filemanager.style.display;
+    if(display1=="none"&&display2=="none"){
       $scope.chatbox.style.display = "block";
-    }else{
+    }else if(display1=="none"&&display2=="block"){
+      $scope.chatbox.style.display = "block";
+      $scope.filemanager.style.display = "none";
+    }
+    else if(display1=="block"){ 
       $scope.chatbox.style.display = "none";
+    }
+    else{
+      $scope.chatbox.style.display = "block";
+    }
+  };
+  $scope.toggleFile =  function() {
+    display1 = $scope.filemanager.style.display;
+    display2 = $scope.chatbox.style.display;
+    if(display1=="none"&&display2=="none"){
+      $scope.filemanager.style.display = "block";
+    }else if(display1=="none"&&display2=="block"){
+      $scope.chatbox.style.display = "none";
+      $scope.filemanager.style.display = "block";
+    }
+    else if(display1=="block"){ 
+      $scope.filemanager.style.display = "none";
+    }
+    else{
+      $scope.filemanager.style.display = "block";
     }
   };
 
