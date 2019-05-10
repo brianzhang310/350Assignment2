@@ -28,6 +28,7 @@ app.controller("myController", function($scope) {
   $scope.chatbox={};
   $scope.chatbox.style={};
   $scope.chatbox.style.display='';
+  
   $scope.closeForm =  function()  {
     $scope.chatbox.style.display = "none";
   };
