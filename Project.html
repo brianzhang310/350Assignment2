@@ -46,13 +46,15 @@
 
                   <div class="col-sm"> 
                         <div class='layout__list'>
-                          <div class="list__type">
-                            <h1>To Do</h1>
-                          </div>
-                          <div class='list__card'  ng-repeat="task in TodoList">
-                              <label class='card__label'>{{ task.title }}</label>
-                              <div class='card__date'>{{ task.date }}</div>
-                          </div>
+                            <div id="todo">
+                                <div class="list__type">
+                                    <h1>To Do</h1>
+                                </div>
+                                <div class='list__card'  ng-repeat="task in TodoList">
+                                    <label class='card__label'>{{ task.title }}</label>
+                                    <div class='card__date'>{{ task.date }}</div>
+                                </div>
+                            </div>
                           <div class="addTaskButton" ng-click="addNewTask()">
                               +Add Another Task  
                           </div>
@@ -123,7 +125,7 @@
                   <div class="layout_box">
                     <div class="chat-header row" style="margin-left: 0px;margin-right: 0px;">
                         <h2 style="margin:auto;">File Manager </h2>
-                        <icon class="fa fa-window-close closeButton" style="margin:auto;" ng-click="closeFile()"></icon>
+                        <icon class="fa fa-window-close closeButton" style="margin:auto;cursor: pointer;" ng-click="closeFile()"></icon>
                     </div>
                     <!-- empty column -->
                     
@@ -157,11 +159,12 @@
                   AssignedTo:<input></input>
               </div>
               <div class="row" style="padding:8px">
-                  Description:<input></input>
+
+                  Description:<input id="txtVal"></input>
               </div>
               <div class="row">
                 <div  class="center">
-              <button>Add</button>
+              <button onclick="addLi()">Add</button>
               </div>
               </div>
             </div>
@@ -188,6 +191,23 @@
               dialog.style.display = "none";
             }
           }
+
+
+          // Add description user typed in List-card
+          function addLi()
+          {
+              var div = document.createElement('div');
+              var txtVal = document.getElementById('txtVal').value;
+              var    newlabel = document.createElement("label");
+              var   txtNode = document.createTextNode(txtVal);
+              newlabel.appendChild(txtNode);
+
+              div.textContent=txtVal;
+              div.setAttribute('class', 'list__card');
+              document.getElementById('todo').appendChild(div);
+
+          }
+
           </script>
        
         <!-- enable bootstrap plugins -->

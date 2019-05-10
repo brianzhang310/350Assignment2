@@ -3,7 +3,7 @@ var app = angular.module("myApp", []);
 
 app.controller("myController", function($scope) {
   $scope.names = ["John","Doe","Brian","Lisa","Erin","XiaoDangJia"];
-  $scope.titles = ["Make 1","Stop","Design shit","Nm$L","cxk出来打球","我佛了"]
+  $scope.titles = ["Make 1","Stop","Design good","Nm$L","cxk出来打球","我佛了"]
   var task5=[];
   var task4=[];
   var task3=[];
