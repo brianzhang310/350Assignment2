@@ -25,19 +25,20 @@ app.controller("myController", function($scope) {
   $scope.DoingList = [$scope.tasks[3],$scope.tasks[4]];
   $scope.DoneList = [$scope.tasks[5],$scope.tasks[1]];
 
-
-
-  $scope.closeForm() = function()  {
+  $scope.chatbox={};
+  $scope.chatbox.style={};
+  $scope.chatbox.style.display='';
+  $scope.closeForm =  function()  {
     $scope.chatbox.style.display = "none";
   };
 
 
-  $scope.toggleForm() = function() {
+  $scope.toggleForm =  function() {
     display = $scope.chatbox.style.display;
     if(display=="none"){
-          document.getElementById("myForm").style.display = "block";
+      $scope.chatbox.style.display = "block";
     }else{
-          document.getElementById("myForm").style.display = "none";
+      $scope.chatbox.style.display = "none";
     }
   };
 

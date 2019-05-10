@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- JS -->
         <script src="AngularJs.js"></script>
+         <!-- AngularJS -->
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
         <script src="myController.js"></script>
     </head>
 
@@ -28,7 +30,7 @@
           <ul class="menu">
             <a class="fa fa-home" href="C:\Users\zhugu\Documents\GitHub\350Assignment2\index.html"></a>
             <a class="fa fa-file" href="#"></a>
-            <a class="fa fa-comments" href="#" onclick="toggleForm()"></a>
+            <a class="fa fa-comments" href="#" ng-click="toggleForm()"></a>
           </ul>
         </div>
 
@@ -90,7 +92,7 @@
             </div>
 
             <div class="col-sm-3">
-              <div ng-model="chatbox" style="display:none">
+              <div ng-model="chatbox" style="display:{{chatbox.style.display}}">
               <div class="chatbox">
                   <div class="chat-header row" style="margin-left: 0px;margin-right: 0px;">
                       <h2 style="margin:auto;">Chat Room </h2>
@@ -113,8 +115,7 @@
         </div>
       </div>
 
-        <!-- AngularJS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+       
         <!-- enable bootstrap plugins -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
