@@ -116,6 +116,55 @@
         </div>
       </div>
 
+
+      <!-- 港仔代码 -->
+      <div id="newTask" class="dialog form">
+          <!-- Dialog content -->
+          <div class="popup">
+            <div class="dialog-header">
+              <span class="close">&times;</span>
+              <h2>Add New Task</h2>
+            </div>
+            <div class="container">
+              <div class="row" style="padding:8px">
+                  TitleOfTask :<input></input>
+              </div>
+              <div class="row" style="padding:8px">
+                  AssignedTo:<input></input>
+              </div>
+              <div class="row" style="padding:8px">
+                  Description:<input></input>
+              </div>
+              <div class="row">
+                <div  class="center">
+              <button>Add</button>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <script>
+          var dialog = document.getElementById('newTask'); // The popup dialog
+          var span = document.getElementsByClassName("close")[0]; // Close button (X)
+          var btns = document.getElementsByClassName("addTaskButton");
+          var i;
+          for (i = 0; i < 3; i++) {
+            // Show dialog when the "Add new task" button is clicked
+            btns[i].onclick = function() {
+              dialog.style.display = "block";
+            }
+          }
+          // Hide dialog when (X) button is clicked
+          span.onclick = function() {
+            dialog.style.display = "none";
+          }
+          // Close dialog when the outside of the dialog is clicked
+          window.onclick = function(event) {
+            if (event.target == dialog) {
+              dialog.style.display = "none";
+            }
+          }
+          </script>
        
         <!-- enable bootstrap plugins -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
