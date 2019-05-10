@@ -3,52 +3,76 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+      
+
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+
+
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script> 
     <!-- CSS -->
     <link rel="stylesheet" href="350.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
+    <link rek="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
     <!-- JS -->
     <script src="chat.js"></script>
   </head>
-  <body>
+
+
+
+
+  <body style="background-color:#a6b3bb">
 
   <!-- Navigation bar -->
   <div class="header">
-    <h2 class="logo">350Assignment2</h2>
-    <input type="checkbox" id="chk">
+    <div class="logo">
+      <i class="fa fa-arrow-left"></i>
+      <a>350Assignment2</a>
+    </div>
     <label for="chk" class="show-menu-btn">
       <i class="fas fa-ellipsis-h"></i>
     </label>
 
     <ul class="menu">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Profile</a>
-      <a href="#" onclick="openForm()">Contact</a>
-      <label for="chk" class="hide-menu-btn">
-        <i class="fas fa-times"></i>
-      </label>
+      <a class="fa fa-home" href="C:\Users\zhugu\Documents\GitHub\350Assignment2\index.html"></a>
+      <a class="fa fa-file" href="#"></a>
+      <a class="fa fa-comments" href="#" onclick="toggleForm()"></a>
     </ul>
   </div>
 
   <!-- Grid Panel -->
   <div class="container">
     <!-- Chat box -->
-    <div class=" chat__room">
+    <div class="chat__box">
       <div class="chat-popup" id="myForm">
         <form action="/action_page.php" class="form-container">
           <div class="chat-header">
             <button class="btn_cancel" onclick="closeForm()">&times;</button>
             <h2>Chat room</h2>
           </div>
-            <img src="chatbox.png" style="width:100%;height:100%; ">
+            <img src="ChatImage.png" style="width:100%;height:600px; ">
 
           <div class="chat_send">
             <textarea placeholder="Type message.." name="msg" required></textarea>
-            <button class="btn">Send</button>
+            <i class="fa fa-arrow-circle-up" style="font-size:-webkit-xxx-large;float:right;color:#a6b3bb"></i>
           </div>
         </form>
       </div>
@@ -111,11 +135,15 @@
     <div class="dialog-content">
       <div class="dialog-header">
         <span class="close">&times;</span>
-        <h2>Add New Task</h2>
+        <h2>New Task</h2>
       </div>
-      <div class="dialog-body">
-        <textarea rows="3" name="addTaskTextarea"></textarea><br>
-        <button>Add</button>
+      <div class=" rowBox row">
+        <label class="col-3-md" >Title</label>
+        <input class="col-9-md" style="margin-right: 150px;float: right;" name="addTaskTextarea"/><br>
+      </div>
+      <div class="rowBox row">
+        <label class="col-3-md" >Description</label>
+        <input class="col-9-md" style="margin-right: 150px;float: right;" name="addDescriptionTextarea"/><br>
       </div>
     </div>
   </div>
@@ -146,6 +174,8 @@
       }
     }
     </script>
+
+    
   </div>
   </div>
   </body>
