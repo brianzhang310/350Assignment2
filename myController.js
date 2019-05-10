@@ -21,14 +21,14 @@ app.controller("myController", function($scope) {
     $scope.tasks[i].date = $scope.dates[i];
     $scope.tasks[i].person = $scope.names[i];
   }
-  $scope.TodoList = [$scope.tasks[0],$scope.tasks[2]];
-  $scope.DoingList = [$scope.tasks[3],$scope.tasks[4]];
-  $scope.DoneList = [$scope.tasks[5],$scope.tasks[1]];
+  $scope.TodoList = [$scope.tasks[0],$scope.tasks[2],$scope.tasks[4],$scope.tasks[5]];
+  $scope.DoingList = [$scope.tasks[3],$scope.tasks[4],$scope.tasks[2],$scope.tasks[0]];
+  $scope.DoneList = [$scope.tasks[5],$scope.tasks[1],$scope.tasks[3]];
 
   $scope.chatbox={};
   $scope.chatbox.style={};
   $scope.chatbox.style.display='';
-  
+
   $scope.closeForm =  function()  {
     $scope.chatbox.style.display = "none";
   };
@@ -42,6 +42,13 @@ app.controller("myController", function($scope) {
       $scope.chatbox.style.display = "none";
     }
   };
+
+  $scope.addNewTask = function(){
+    $uimodal.open({
+      templateurl:'new.html',
+      controller: 'newController'
+    })
+  }
 
 
 });
